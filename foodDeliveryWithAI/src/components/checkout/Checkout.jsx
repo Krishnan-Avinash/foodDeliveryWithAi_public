@@ -41,27 +41,6 @@ const Checkout = () => {
   }, [itemsList]);
   // const totalPrice = useSelector((state) => state.reducer.totalPrice);
 
-  const lsqyConfig = {
-    API_KEY: import.meta.env.VITE_LEMON_SQUEEZY_API_KEY,
-    URL: import.meta.env.VITE_LEMON_SQUEEZY_BASE_URL,
-  };
-
-  const headers = {
-    Accept: "application/vnd.api+json",
-    "Content-Type": "application/vnd.api+json",
-    Authorization: `Bearer ${lsqyConfig.API_KEY}`,
-  };
-
-  const getProducts = async () => {
-    try {
-      const response = await axios.get(`${lsqyConfig.URL}/products`, {
-        headers,
-      });
-      // console.log("response: ", response);
-    } catch (error) {}
-  };
-  getProducts();
-
   const [userDetailsAfterFetch, setUserDetailsAfterFetch] = useState({});
   async function getUserDetails() {
     const response = await axios.get(

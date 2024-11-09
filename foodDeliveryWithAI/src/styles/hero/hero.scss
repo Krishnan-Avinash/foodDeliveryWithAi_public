@@ -1,0 +1,63 @@
+.hero-parent {
+  //   width: 100%;
+  //   height: ;
+  color: white;
+  //   background-color: blue;
+  img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  .hero-text {
+    position: absolute;
+    top: 0;
+    // z-index: 2;
+    margin: 0rem 2rem;
+    // height: 100%;
+    padding: 15rem 10rem;
+    width: 50%;
+    overflow-x: hidden;
+    // background-color: red;
+    line-height: 8rem;
+    .namaste {
+      height: 100%;
+      font-size: 6rem;
+      font-family: "Cedarville Cursive", cursive;
+    }
+    .what-text {
+      //   background-color: blue;
+      width: 90%;
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      //   background-color: green;
+      padding: 2rem 0.5rem;
+      .order,
+      .suggest-me {
+        cursor: pointer;
+        border: 1px solid #ff6600;
+        height: fit-content;
+        padding: 2rem 3rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: #ff6600;
+        border-radius: 5rem;
+        width: fit-content;
+        line-height: 0;
+        transition: all 0.1s linear;
+        &:hover {
+          transform: scale(1.1);
+          filter: drop-shadow(2px 2px 20px #ff6600);
+        }
+      }
+      .suggest-me {
+        background-color: wheat;
+        color: black;
+        border: 1px solid wheat;
+      }
+    }
+  }
+}

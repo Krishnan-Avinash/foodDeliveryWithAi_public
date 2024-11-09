@@ -1,0 +1,43 @@
+.authenticate-parent {
+  min-height: 100vh;
+  width: 100%;
+  background: #000000b3;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  .authenticate-heading {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
+    // border: 1px solid white;
+    span {
+      background: #cf45af;
+      background: linear-gradient(to right, #cf45af 0%, #22cfc9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(1px 1px 50px white);
+    }
+  }
+  .signout-button {
+    background-color: wheat;
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all 0.1s linear;
+    &:hover {
+      filter: drop-shadow(1px 1px 10px rgb(255, 115, 0));
+      transform: scale(1.02);
+    }
+  }
+}

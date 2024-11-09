@@ -1,0 +1,195 @@
+.cart-parent {
+  min-height: 100vh;
+  width: 100%;
+  background: #000000b3;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  gap: 1rem;
+  padding: 4rem;
+  color: white;
+  .cart-left {
+    width: 75%;
+    // background-color: red;
+    padding: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #f5deb3e6;
+    box-shadow: 0 8px 32px 0 #f5deb3e6;
+    backdrop-filter: blur(14.5px);
+    -webkit-backdrop-filter: blur(14.5px);
+    border-radius: 10px;
+    .cart-left-top {
+      h1 {
+        font-family: "Cedarville Cursive", cursive;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      padding: 0 2rem;
+      color: black;
+    }
+    .cart-left-listout {
+      padding: 2rem 2rem 0 2rem;
+      .table-container {
+        border: 1px solid black;
+        .hmnh {
+          .header-1 {
+            .header-2 {
+              .header-3 {
+                font-weight: 700;
+                font-size: 1.1rem;
+              }
+            }
+          }
+          .hmnh-2 {
+            .hmnh-3 {
+              .hmnh-4 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: end;
+                gap: 0.5rem;
+                .minus,
+                .plus {
+                  padding: 0.25rem 0.75rem;
+                  outline: none;
+                  border: none;
+                  font-size: 1.1rem;
+                  font-weight: 700;
+                  border-radius: 50%;
+                  cursor: pointer;
+                }
+                .minus {
+                  background-color: #ff62626a;
+                  border: 1px solid #ff6262;
+                }
+                .plus {
+                  background-color: #99ff0079;
+                  border: 1px solid #99ff00;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cart-right {
+    padding: 2rem;
+    width: 25%;
+    background-color: white;
+    box-shadow: 0 8px 32px 0 white;
+    color: black;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .cart-right-top {
+      //   border-bottom: 1px solid black;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      //   background-color: red;
+      h1 {
+        font-size: 1.25rem;
+        // background-color: red;
+        border-bottom: 1px solid black;
+        // border-radius: 1rem;
+      }
+      p {
+        line-height: 1.4rem;
+      }
+      input {
+        padding: 0.5rem 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid black;
+        outline: none;
+        &:focus,
+        &:hover {
+          outline: none;
+          box-shadow: 1px 1px 10px black;
+        }
+      }
+      .apply-coupon {
+        padding: 0.5rem 1rem;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.1s linear;
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+    .cart-right-bottom {
+      //   border-bottom: 1px solid black;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      filter: drop-shadow(1px 1px 10px wheat);
+      h1 {
+        font-size: 1.25rem;
+        // background-color: red;
+        border-bottom: 1px solid black;
+        // border-radius: 1rem;
+      }
+      table {
+        // background-color: yellowgreen;
+        display: flex;
+        flex-direction: column;
+        tr {
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          td,
+          th {
+            display: flex;
+            justify-content: start;
+            width: 50%;
+          }
+          .r-2 {
+            justify-content: end;
+          }
+        }
+      }
+      a {
+        padding: 0.5rem 1rem;
+        background-color: black;
+        color: white;
+        font-weight: 700;
+        outline: none;
+        border: none;
+        border-radius: 0.75rem;
+        font-size: 0.95rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.1s linear;
+        &:hover {
+          transform: scale(1.02);
+        }
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          outline: none;
+          border: none;
+          color: white;
+          font-size: 0.95rem;
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

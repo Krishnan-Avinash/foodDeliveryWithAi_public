@@ -1,0 +1,18 @@
+.payment-parent {
+  //   min-height: 100vh;
+  //   width: 100%;
+  background: #000000b3;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  padding: 2rem 0;
+  .payment-right {
+    padding: 3rem;
+    color: white;
+  }
+}

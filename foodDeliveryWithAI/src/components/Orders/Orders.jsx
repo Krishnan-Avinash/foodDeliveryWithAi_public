@@ -29,7 +29,7 @@ const Orders = () => {
       `${import.meta.env.VITE_URL}/API/aiFoodDelivery/userOrder/getOrder`,
       {
         params: {
-          email: userFromRedux.email,
+          email: userEmail,
         },
       }
     );

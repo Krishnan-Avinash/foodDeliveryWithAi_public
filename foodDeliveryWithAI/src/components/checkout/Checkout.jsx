@@ -44,9 +44,12 @@ const Checkout = () => {
   const [userDetailsAfterFetch, setUserDetailsAfterFetch] = useState({});
   async function getUserDetails() {
     const response = await axios.get(
-      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/getUser?email=${
-        userFromRedux.email
-      }`
+      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/getUser`,
+      {
+        params: {
+          email: userFromRedux.email,
+        },
+      }
     );
     // console.log("response: ", response.data.foundUser);
     setUserDetailsAfterFetch(response.data.foundUser);

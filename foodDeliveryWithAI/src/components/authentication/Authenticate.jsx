@@ -22,9 +22,12 @@ const Authenticate = () => {
 
   async function fetchCart() {
     const response = await axios.get(
-      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/cart/getCart?email=${
-        userFromRedux.email
-      }`
+      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/cart/getCart`,
+      {
+        params: {
+          email: userFromRedux.email,
+        },
+      }
     );
     // console.log("response: ", response.data.cart);
     setFetchData(response.data.cart);
@@ -50,9 +53,12 @@ const Authenticate = () => {
     // console.log("user object after decoding:", userObject);
     try {
       const res = await axios.get(
-        `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/getUser?email=${
-          userObject.email
-        }`
+        `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/getUser`,
+        {
+          params: {
+            email: userFromRedux.email,
+          },
+        }
       );
       // console.log("res from get: ", res);
       if (res.data.success) {

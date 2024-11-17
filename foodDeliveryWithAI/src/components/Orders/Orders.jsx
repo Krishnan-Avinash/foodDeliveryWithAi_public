@@ -26,9 +26,12 @@ const Orders = () => {
   const [fetchedData, setFetchedData] = useState([]);
   async function getOrders() {
     const response = await axios.get(
-      `${
-        import.meta.env.VITE_URL
-      }/API/aiFoodDelivery/userOrder/getOrder?email=${userEmail.email}`
+      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/userOrder/getOrder`,
+      {
+        params: {
+          email: userFromRedux.email,
+        },
+      }
     );
     // console.log("response: ", response.data.orders);
     setFetchedData(response.data.orders);

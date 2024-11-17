@@ -46,7 +46,7 @@ const Suggestion = () => {
 
     try {
       const response = await axios.get(
-        "http://localhost:6374/API/aiFoodDelivery/geminiRes",
+        "import.meta.env.VITE_URL/API/aiFoodDelivery/geminiRes",
         {
           params: {
             userReq: currentQuery,

@@ -44,7 +44,7 @@ const Checkout = () => {
   const [userDetailsAfterFetch, setUserDetailsAfterFetch] = useState({});
   async function getUserDetails() {
     const response = await axios.get(
-      `http://localhost:6374/API/aiFoodDelivery/user/getUser?email=${userFromRedux.email}`
+      `import.meta.env.VITE_URL/API/aiFoodDelivery/user/getUser?email=${userFromRedux.email}`
     );
     // console.log("response: ", response.data.foundUser);
     setUserDetailsAfterFetch(response.data.foundUser);
@@ -82,7 +82,7 @@ const Checkout = () => {
     }
     try {
       const response = await axios.patch(
-        "http://localhost:6374/API/aiFoodDelivery/user/updateUser",
+        "import.meta.env.VITE_URL/API/aiFoodDelivery/user/updateUser",
         {
           firstName,
           lastName,

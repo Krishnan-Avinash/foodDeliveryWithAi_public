@@ -46,14 +46,14 @@ function TestPayment() {
   async function handleClear() {
     dispatch(clearCart());
     await axios.post(
-      "http://localhost:6374/API/aiFoodDelivery/cart/clearCart",
+      "import.meta.env.VITE_URL/API/aiFoodDelivery/cart/clearCart",
       { email: userFromRedux }
     );
   }
 
   async function handleOrderPlacement() {
     await axios.post(
-      "http://localhost:6374/API/aiFoodDelivery/userOrder/newOrder",
+      "import.meta.env.VITE_URL/API/aiFoodDelivery/userOrder/newOrder",
       { itemsList, email: userFromRedux, totalPrice }
     );
   }
@@ -73,7 +73,7 @@ function TestPayment() {
               try {
                 // Updated URL to match backend route
                 const response = await fetch(
-                  "http://localhost:6374/API/aiFoodDelivery/payment/orders",
+                  "import.meta.env.VITE_URL/API/aiFoodDelivery/payment/orders",
                   {
                     method: "POST",
                     headers: {
@@ -109,7 +109,7 @@ function TestPayment() {
               try {
                 // Updated to use axios with the correct endpoint
                 const response = await axios.post(
-                  `http://localhost:6374/API/aiFoodDelivery/payment/orders/${data.orderID}/capture`
+                  `import.meta.env.VITE_URL/API/aiFoodDelivery/payment/orders/${data.orderID}/capture`
                 );
 
                 const orderData = response.data;

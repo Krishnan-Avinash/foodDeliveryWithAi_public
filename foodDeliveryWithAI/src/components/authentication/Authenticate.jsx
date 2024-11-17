@@ -22,7 +22,9 @@ const Authenticate = () => {
 
   async function fetchCart() {
     const response = await axios.get(
-      `import.meta.env.VITE_URL/API/aiFoodDelivery/cart/getCart?email=${userFromRedux.email}`
+      `${import.meta.env.VITE_URL}/API/aiFoodDelivery/cart/getCart?email=${
+        userFromRedux.email
+      }`
     );
     // console.log("response: ", response.data.cart);
     setFetchData(response.data.cart);
@@ -48,7 +50,9 @@ const Authenticate = () => {
     // console.log("user object after decoding:", userObject);
     try {
       const res = await axios.get(
-        `import.meta.env.VITE_URL/API/aiFoodDelivery/user/getUser?email=${userObject.email}`
+        `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/getUser?email=${
+          userObject.email
+        }`
       );
       // console.log("res from get: ", res);
       if (res.data.success) {
@@ -63,7 +67,7 @@ const Authenticate = () => {
 
         try {
           const registrationResponse = await axios.post(
-            "import.meta.env.VITE_URL/API/aiFoodDelivery/user/newUser",
+            `${import.meta.env.VITE_URL}/API/aiFoodDelivery/user/newUser`,
             newUser
           );
           dispatch(addUserToRedux(registrationResponse.user.email));

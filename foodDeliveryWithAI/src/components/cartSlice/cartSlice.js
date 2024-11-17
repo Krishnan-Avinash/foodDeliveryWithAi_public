@@ -7,7 +7,7 @@ export const addToCartAsync = createAsyncThunk(
   async ({ name, price, userLoggedIn }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "import.meta.env.VITE_URL/API/aiFoodDelivery/cart/addToCart",
+        `${import.meta.env.VITE_URL}/API/aiFoodDelivery/cart/addToCart`,
         {
           email: userLoggedIn,
           name: name,
@@ -33,7 +33,7 @@ export const removeFromCartAsync = createAsyncThunk(
   async ({ name, userLoggedIn }, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "import.meta.env.VITE_URL/API/aiFoodDelivery/cart/removeFromCart",
+        `${import.meta.env.VITE_URL}/API/aiFoodDelivery/cart/removeFromCart`,
         {
           email: userLoggedIn,
           name: name,

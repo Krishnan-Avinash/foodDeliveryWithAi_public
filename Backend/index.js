@@ -8,12 +8,15 @@ import router from "./routes/order.route.js";
 import cartRouter from "./routes/cart.route.js";
 import newOrderRouter from "./routes/newOrder.route.js";
 
+connectDb();
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-connectDb();
+//GEMINI
 app.use("/API/aiFoodDelivery/", geminiRouter);
+
+//USER
 app.use("/API/aiFoodDelivery/user/", userRouter);
 
 //PAYPAL
